@@ -17,11 +17,11 @@ def create_person_list(people: list) -> list:
         person_object = Person.people[person["name"]]
 
         if "wife" in person:
-            if person["wife"]:
+            if person["wife"] is not None:
                 wife = Person.people[person["wife"]]
                 person_object.wife = wife
         elif "husband" in person:
-            if person["husband"]:
+            if person["husband"] is not None:
                 husband = Person.people[person["husband"]]
                 person_object.husband = husband
 
